@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivus - Pixel Perfect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="container">
+        <nav class="navbar">
+            <img src="images/star..png" alt="Logo" class="main-logo">
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="nav-link">About us</a></li>
+                <li><a href="#" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link">Use Cases</a></li>
+                <li><a href="#" class="nav-link">Pricing</a></li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><button class="btn-outline">Request a quote</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero container">
+        <div class="hero-content">
+            <h1>Navigating the digital landscape for success</h1>
+            <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+            <button class="btn-black">Book a consultation</button>
+        </div>
+        <img src="images/Illustration.jpg" alt="Hero" class="hero-img">
+    </section>
+
+    <div class="brands container">
+        <img src="images/amazon.png" alt="Amazon">
+        <img src="images/dribble.png" alt="Dribbble">
+        <img src="images/hub.png" alt="HubSpot">
+        <img src="images/notion.png" alt="Notion">
+        <img src="images/netflix.png" alt="Netflix">
+        <img src="images/zoom.png" alt="Zoom">
+    </div>
+
+    <section class="process container">
+        <div class="section-header">
+            <span class="green-label">Our Working Process</span>
+            <p>Step-by-Step Guide to Achieving Your Business Goals</p>
+        </div>
+        
+        <div class="accordion">
+            <div class="acc-item active">
+                <div class="acc-header"><span>01</span> Consultation <span class="icon-circle">−</span></div>
+                <div class="acc-body">
+                    <hr>
+                    <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts.</p>
+                </div>
+            </div>
+            <div class="acc-item"><div class="acc-header"><span>02</span> Research and Strategy Development <span class="icon-circle">+</span></div></div>
+            <div class="acc-item"><div class="acc-header"><span>03</span> Implementation <span class="icon-circle">+</span></div></div>
+            <div class="acc-item"><div class="acc-header"><span>04</span> Monitoring and Optimization <span class="icon-circle">+</span></div></div>
+            <div class="acc-item"><div class="acc-header"><span>05</span> Reporting and Communication <span class="icon-circle">+</span></div></div>
+            <div class="acc-item"><div class="acc-header"><span>06</span> Continual Improvement <span class="icon-circle">+</span></div></div>
+        </div>
+    </section>
+
+    <section class="contact container">
+        <div class="section-header">
+            <span class="green-label">Contact Us</span>
+            <p>Connect with Us:Let's Discuss Your <br>Digital Marketing Needs</p>
+        </div>
+        <div class="contact-card">
+            <form>
+                <div class="radio-grp">
+                    <label><input type="radio" name="r" checked> Say Hi</label>
+                    <label><input type="radio" name="r"> Get a Quote</label>
+                </div>
+                <div class="input-grp">
+                    <label>Name</label><input type="text" placeholder="Name">
+                    <label>Email*</label><input type="email" placeholder="Email">
+                    <label>Message*</label><textarea placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn-black full-w">Send Message</button>
+            </form>
+            <div class="contact-visual">
+                <img src="images/wave.png" alt="Star Asset">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <div class="footer-bg">
+            <div class="f-top">
+                <img src="images/Logo.png" alt="Logo" class="logo-white">
+                <div class="f-nav">
+                    <a href="#">About us</a><a href="#">Services</a><a href="#">Use Cases</a>
+                </div>
+                <div class="f-social">
+                    <img src="images/socialiconl.png.png" alt="">
+                    <img src="images/facebook.png" alt="">
+                    <img src="images/Socialicot.png" alt="">
+                </div>
+            </div>
+            <div class="f-cta-box">
+                <div class="f-contact">
+                    <span class="contact-badge">Contact us:</span>
+                    <p>Email: info@positivus.com</p>
+                    <br>
+                    <p>Phone: 555-567-8901</p>
+                    <br>
+                    <p>Address: 1234 Main St</p>
+                    <p>Moonstone City,Stardust State 12345</p>
+                </div>
+                <div class="f-news">
+                    <input type="email" placeholder="Email">
+                    <button class="btn-green">Subscribe to news</button>
+                </div>
+            </div>
+            <hr class="f-line">
+            <p class="f-copy">© 2026 Positivus. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
